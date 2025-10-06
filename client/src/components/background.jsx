@@ -10,7 +10,7 @@ export default function StarBackground() {
     }));
 
     return (
-        <div className="relative w-full h-screen bg-gray-900 overflow-hidden">
+        <div className="relative w-screen h-screen bg-gray-900 overflow-hidden">
             {stars.map((star) => (
                 <div
                     key={star.id}
@@ -27,10 +27,10 @@ export default function StarBackground() {
             <div className="relative z-10 flex items-center justify-center h-full">
                 <div className="text-center">
                     <h1 className="text-5xl font-bold text-white mb-4">
-                        Starry Night
+                        1nsight
                     </h1>
                     <p className="text-gray-300 text-lg">
-                        A simple star background with Tailwind CSS
+                        take your volleyball game to the next level
                     </p>
                 </div>
             </div>
