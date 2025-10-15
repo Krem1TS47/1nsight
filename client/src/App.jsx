@@ -1,6 +1,8 @@
 
 import StarBackground from './components/background'
-import TitleText from './components/titletext'
+import AccountButtons from './components/accountButtons'
+
+
 import './App.css'
 
 function App() {
@@ -9,7 +11,7 @@ function App() {
     return (
         <div className="App">
             <StarBackground />
-            <TitleText />
+            <AccountButtons />
         </div>
     )
 }
