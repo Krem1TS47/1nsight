@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import authRoutes from "./routes/auth.js";
 import taskRoutes from "./routes/tasks.js";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // express = handling framework for building backend server and APIs
 // mongoose = NoSQL database
@@ -21,6 +22,12 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
+
+const genAI = new GoogleGenerativeAI({
+    apiKey: process.env.GOOGLE_API_KEY
+});
+
+const model = genAI.getModel("gemini-1.5-flash");
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log("Connected to MongoDB"))
