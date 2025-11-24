@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const taskSchema = new mongoose.Schema({
     title: String,
@@ -6,4 +6,4 @@ const taskSchema = new mongoose.Schema({
     userId: {type: mongoose.Schema.Types.ObjectId, ref: "User"}
 });
 
-export default mongoose.model("Task", taskSchema);
+module.exports = mongoose.model("Task", taskSchema);
